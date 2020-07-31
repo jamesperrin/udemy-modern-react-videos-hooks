@@ -13,7 +13,7 @@ class SearchBar extends React.Component {
         // TODO: Make sure we call
         // callback from parent component
         if (this.state.term) {
-            console.log(this.state.term);
+            this.props.onFormSubmit(this.state.term);
         }
     };
 
