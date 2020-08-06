@@ -3,6 +3,7 @@ import SearchBar from './SearchBar';
 import youtube from '../apis/youtube';
 import config from '../config/config';
 import VideoList from './VideoList';
+import VideoDetail from './VideoDetail';
 
 const KEY = `${config.ApiKeyValue}`;
 
@@ -26,16 +27,15 @@ class App extends React.Component {
 
     onVideoSelect = (video) => {
         console.log('From the app!', video);
+        this.setState({ selectedVideo: video });
     };
 
     render() {
         return (
             <div className="ui container">
                 <SearchBar onFormSubmit={this.onTermSubmit} />
-                <VideoList
-                onVideoSelect={this.onVideoSelect}
-                videos={this.state.videos}
-                />
+                <VideoDetail video={this.state.selectedVideo} />
+                <VideoList onVideoSelect={this.onVideoSelect} videos={this.state.videos} />
             </div>
         );
     }
