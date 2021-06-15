@@ -5,8 +5,6 @@
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-
-
 # Created by https://www.toptal.com/developers/gitignore/api/node,react
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,react
 
@@ -66,6 +64,9 @@ typings/
 # Optional eslint cache
 .eslintcache
 
+# Optional stylelint cache
+.stylelintcache
+
 # Microbundle cache
 .rpt2_cache/
 .rts2_cache_cjs/
@@ -84,9 +85,11 @@ typings/
 # dotenv environment variables file
 .env
 .env.test
+.env*.local
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
+.parcel-cache
 
 # Next.js build output
 .next
@@ -94,6 +97,14 @@ typings/
 # Nuxt.js build / generate output
 .nuxt
 dist
+
+# Storybook build outputs
+.out
+.storybook-out
+storybook-static
+
+# rollup.js default build output
+dist/
 
 # Gatsby files
 .cache/
@@ -119,6 +130,10 @@ dist
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
+# Temporary folders
+tmp/
+temp/
+
 ### react ###
 .DS_*
 **/*.backup.*
@@ -133,6 +148,7 @@ thumb
 sketch
 
 # End of https://www.toptal.com/developers/gitignore/api/node,react
+
 
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudio,visualstudiocode,sublimetext
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudio,visualstudiocode,sublimetext
@@ -180,6 +196,7 @@ GitHub.sublime-settings
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history
+.ionide
 
 ### VisualStudio ###
 ## Ignore Visual Studio temporary files, build results, and
@@ -207,6 +224,7 @@ mono_crash.*
 [Rr]eleases/
 x64/
 x86/
+[Ww][Ii][Nn]32/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
@@ -244,6 +262,9 @@ BenchmarkDotNet.Artifacts/
 project.lock.json
 project.fragment.lock.json
 artifacts/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
 
 # StyleCop
 StyleCopReport.xml
@@ -322,7 +343,8 @@ _TeamCity*
 !.axoCover/settings.json
 
 # Coverlet is a free, cross platform Code Coverage Tool
-coverage*[.json, .xml, .info]
+coverage*.[ji][sn][of][no]
+coverage*.xml
 
 # Visual Studio code coverage results
 *.coverage
@@ -536,8 +558,14 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
-# End of https://www.toptal.com/developers/gitignore/api/visualstudio,visualstudiocode,sublimetext
+# Fody - auto-generated XML schema
+FodyWeavers.xsd
 
+### VisualStudio Patch ###
+# Additional files built by Visual Studio
+*.tlog
+
+# End of https://www.toptal.com/developers/gitignore/api/visualstudio,visualstudiocode,sublimetext
 
 # Created by https://www.toptal.com/developers/gitignore/api/linux,windows,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=linux,windows,macos
@@ -565,6 +593,7 @@ MigrationBackup/
 
 # Icon must end with two \r
 Icon
+
 
 # Thumbnails
 ._*
@@ -613,9 +642,7 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,windows,macos
 
+
 ## CUSTOM GITIGNORE SETTINGS
 
-
-
 # End of CUSTOM GITIGNORE SETTINGS
-
